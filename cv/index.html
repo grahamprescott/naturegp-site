@@ -88,12 +88,23 @@
     display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; }
 
   @media print {
-    body { background: #fff; color: #000; font-size: 11.5pt; }
+    @page { size: A4; margin: 12mm 15mm; }
+    body { background: #fff; color: #000; font-size: 9.5pt; line-height: 1.36; }
     .page { max-width: none; padding: 0; }
     a { color: #000; border-bottom: 0; }
-    .built article { border-color: #bbb; break-inside: avoid; }
-    section { break-inside: avoid; }
+    .src a { color: #2f4bc7; }
+    header { padding-bottom: 14px; }
+    h1 { font-size: 26pt; }
+    .tagline { font-size: 12.5pt; margin-bottom: 10px; }
+    section { grid-template-columns: 100px 1fr; gap: 0 16px; padding: 11px 0; break-inside: auto; }
+    .body { max-width: none; }
+    .built { gap: 6px; }
+    .built article { border-color: #c8ccd4; padding: 8px 10px; break-inside: avoid; }
+    .item { margin-bottom: 7px; }
+    .item h3, .built h3 { font-size: 11pt; }
+    .pubs li { break-inside: avoid; font-size: 9.5pt; margin-bottom: 5px; }
     .links span { display: none; }
+    footer { margin-top: 14px; }
   }
 </style>
 
